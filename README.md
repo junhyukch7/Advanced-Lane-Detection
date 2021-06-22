@@ -31,11 +31,12 @@ Window10(64bit), c++17, OPENCV4.0.0
 
 ### Step 1
 * Camera Calibration
+  
 실제로 우리가 보는 세상은 3차원이다. 하지만 카메라로 이것을 찍으면 2차원 이미지로 변하게 된다. 이러한 왜곡을 해결하기 위해 보정작업은 필수이다. 체크보드 데이터를 이용하여 왜곡계수를 구하고 해당 계수와 cv::undistort()함수를 이용하여 왜곡을 보정한다.
 
 <p align="center"><img src = "https://github.com/junhyukch7/Advanced-Lane-Detection/blob/main/image/cal_result4.PNG" width="40%">
 
-<p align="center">Finding distorted coefficent task using Check Board
+<p align="center">Finding distortion coefficent task using Check Board
   
 |distorted|undistorted|
 |------|---|
@@ -44,6 +45,7 @@ Window10(64bit), c++17, OPENCV4.0.0
   
 ### Step 2
 * Filtering Color(preprocessed)
+  
   차선의 색깔이 희미해지거나 주변색과 유사해질 경우 위와 같이 차선을 인식하지 못하게 된다. 따라서 색을 표현하는 방법을 기존의 RGB에서 HSV로 바꾼다. HSV 이미지에서는 H(Hue)가 일정한 범위를 갖는 순수한 색 정보를 가지고 있기 때문에 RGB 이미지보다 쉽게 색을 분류할 수 있다. 또한 선을 분류할 때 연산량을 줄이기 위해 차선색깔 필터(흰색 노란색)를 적용하였다
   
 <p align="center"><img src = "https://github.com/junhyukch7/Advanced-Lane-Detection/blob/main/image/fillter.jpg" width="50%">
@@ -52,6 +54,7 @@ Window10(64bit), c++17, OPENCV4.0.0
 
 ### Step 3
 * GrayScale(bianry)
+  
   연산량을 줄이기 위해서 픽셀의 모든 값을 이분법적으로 나눠야 한다. 임계값을 기준으로 기준치 미만인 경우 검은색, 이상인 경우 흰색으로 표현하여 연산량을 줄인다.
   이 과정은 이후 흰색 픽셀만을 찾는 slidingwindow함수의 findNonZero 연산을 할때 유용하다.
   
@@ -75,6 +78,7 @@ Window10(64bit), c++17, OPENCV4.0.0
 
 ### Step 6
 * Sliding Window
+  
   가장 많은 시간을 투여한 것 같다... 아이디어는 앞서 전처리 과정에서 binary작업을 수행했기 때문에 차선이 있는 곳은 흰색이고 없는 곳은 검정색으로 표현될 것이다.
   cv::findNonZero 함수를 이용하여 0이 아닌 픽셀의 벡터를 반환한다. 이후 이 벡터의 x좌표를 이용하여 평균x좌표를 구하고 이 좌표에서 y값을 증가시키며 slinding window작업을 수행한다. 
     

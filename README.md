@@ -66,8 +66,10 @@ Window10(64bit), c++17, OPENCV4.0.0
 ### Step 4
 * ROI : 해당 과정은 Bird's eyes view로 transform할 때 기존의 이미지에서 점들을 지정하기 때문에 굳이 거치지 않아도 되는 작업이다.
     
-### Step 5
-* Perspective Transform
+### Step 5 : Perspective Transform
+  
+<p align="center"><img src = "https://github.com/junhyukch7/Advanced-Lane-Detection/blob/main/image/perspective_transform.PNG" width="15%">
+  <p align="center">Bird's Eyes View
   
   ROI과정에서 언급한 것 처럼 기존의 이미지에서 4개의 점을 선택하여 변환을 수행한다. 
   변환하기 전에는 직선 처럼 보이던 선이 변환 후에는 곡선인 것이 확연히 드러나는 것을 알 수 있다.

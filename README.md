@@ -24,8 +24,8 @@ Window10(64bit), c++17, OPENCV 4.0.0
 4. ROI(Region of Interest)
 5. Perspective Transform(Bird's eye view)
 6. Sliding Window
-7. linear interpolation
-8. drawing Line
+7. Linear Interpolation
+8. Drawing Line
 
 ---
 
@@ -94,7 +94,7 @@ Window10(64bit), c++17, OPENCV 4.0.0
 |------|---|
 |<p align="center"><img src = "https://github.com/junhyukch7/Advanced-Lane-Detection/blob/main/image/birdeyeline.jpg" width="80%">|<p align="center"><img src = "https://github.com/junhyukch7/Advanced-Lane-Detection/blob/main/image/pro.jpg" width="80%">|
   
-### Step 8 : drawing Line
+### Step 8 : Drawing Line
   
   Bird's eye view에서 만든 점들을 original 공간의 좌표형태로 바꿔준 후 선을 그린다. 
   

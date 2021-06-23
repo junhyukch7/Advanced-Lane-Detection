@@ -111,7 +111,8 @@ Window10(64bit), c++17, OPENCV 4.0.0
 |------|---|
 |<p align="center"><img src = "https://github.com/junhyukch7/Advanced-Lane-Detection/blob/main/image/challenge.gif" width="80%">|<p align="center"><img src = "https://github.com/junhyukch7/Advanced-Lane-Detection/blob/main/image/birdeye2.gif" width="100%">|
  
- 이전 프로젝트에서 설계한 알고리즘은 곡선영역에서 차선을 인식할때 진동이 매우 심한 모습을 보이며 부정확한 모습을 보여주었다면 이번 프로젝트에서 설계한 알고리즘은 곡선 영역에서도
- 큰 진동없이 차선을 잘 인식한 것을 볼 수 있다.
+이전 프로젝트에서 설계한 알고리즘은 곡선영역에서 차선을 인식할때 매우 심한 진동을 보이며 차선을 인식한다. 이는 매우 불안정한 모습이며 제어 단계에서도 악영향을 미칠 가능성이 있었다.
+반면에 이번 프로젝트에서 설계한 알고리즘은 곡선 영역에서도 큰 진동없이 차선을 잘 인식한 것을 볼 수 있다. 신뢰도가 높은 좌표 데이터를 기반으로 한 선형보간법을 이용하여 기존에 있던
+진동 문제를 해결할 수 있었다.
 
 

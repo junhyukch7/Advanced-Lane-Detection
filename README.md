@@ -14,7 +14,7 @@ Continue after this project(https://github.com/junhyukch7/Lane-Detection)
 
 ---
 ## Envrionment
-Window10(64bit), c++17, OPENCV 4.0.0
+Window10(64bit), c++, OPENCV 4.0.0
 
 ---
 ## Pipline

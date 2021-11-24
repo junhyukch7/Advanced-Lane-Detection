@@ -13,7 +13,7 @@ Continue after this project(https://github.com/junhyukch7/Lane-Detection)
 위의 문제점을 보완하기 위해 하늘에서 내려다본 관점에서 차선을 인식하는 알고리즘을 적용하여 해당 문제점을 해결하였다.
 
 ---
-## Envrionment
+## Environment
 Window10(64bit), c++, OPENCV 4.0.0
 
 ---
